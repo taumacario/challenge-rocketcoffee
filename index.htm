@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RocketCoffee</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="detaiels top"></div>
+  
+  <header>
+    <div class="container">
+      <a  class="logo-mobile" href="#">
+        <img src="./images/logo mobile.svg" alt="logo da empresa Rocketseat">
+      </a>
+      <a class="logo-desktop" href="#">
+        <img src="./images/Logo.svg" alt="logo da empresa Rocketseat">
+      </a>
+      
+      <nav id="navigation">
+        <ul class="menu">
+          <li class="menu-item">
+            <a onclick="closeMenu()" href="#">Home</a>
+          </li>
+          <li class="menu-item">
+            <a onclick="closeMenu()" href="#">Menu</a>
+          </li>
+          <li class="menu-item">
+            <a onclick="closeMenu()" href="#">Recompensas</a>
+          </li>
+          <li class="menu-item">
+            <a onclick="closeMenu()" href="#">Gift Cards</a>
+          </li>
+          <li class="menu-item">
+            <a onclick="closeMenu()" href="#">Lojas</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button aria-expanded="false" aria-label="Open menu" onclick="openMenu()" class="open-menu">
+        <svg width="24" height="8" viewBox="0 0 24 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 0H0V2H24V0Z" fill="#8257E5"/>
+          <path d="M24 6H8V8H24V6Z" fill="#8257E5"/>
+        </svg>
+      </button>
+
+      <button aria-expanded="true" aria-label="Close menu" onclick="closeMenu()" class="close-menu">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32.4963 31.0872L16.9399 15.5309L15.5257 16.9451L31.0821 32.5014L32.4963 31.0872Z" fill="#8257E5"/>
+          <path d="M31.0822 15.5308L15.5259 31.0872L16.9401 32.5014L32.4964 16.945L31.0822 15.5308Z" fill="#8257E5"/>
+        </svg>
+      </button>
+
+      <a class="button nav" href="#">
+        Pegar meu café
+        <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.414 12.207L7.121 6.49997L1.414 0.792969L0 2.20697L4.293 6.49997L0 10.793L1.414 12.207Z" fill="white"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="cta">
+        <p>
+          O café que fará seu código decolar para o próximo nível.
+        </p>
+        <a class="button" href="#">
+          Pegar meu café
+          <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.414 12.207L7.121 6.49997L1.414 0.792969L0 2.20697L4.293 6.49997L0 10.793L1.414 12.207Z" fill="white"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="hero">
+        <h1>Great Coffee <span> &ltGreat Code/&gt</span></h1>
+        <img src="./images/Img Coffee.png" alt="imagem de 2 copos de café com grãos de café flutuando ao lado">
+      </div>
+    </div>
+
+    <div class="detaiels bottom"></div>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+</html>

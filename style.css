@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+:root {
+  font-size: 62.5%;
+  /* 1rem = 10px*/
+  --backgrond: #000;
+  --text-color: #FFF;
+  --button: #8257E5;
+  --border: #29292E;
+  --border-menu-mobile: #A8A8B3;
+  --text-color-menu-mobile: #E1E1E6; }
+
+body {
+  background-color: #000;
+  font-size: 1.6rem;
+  font-family: 'Manrope', sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden; }
+
+.container {
+  width: 100%;
+  padding: 0 25px;
+  margin: auto;
+  max-width: 970px; }
+
+a {
+  text-decoration: none; }
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer; }
+
+ul {
+  list-style: none; }
+
+.detaiels {
+  position: absolute;
+  filter: blur(15rem);
+  background-color: #996DFF;
+  width: 321px;
+  height: 321px;
+  z-index: -1;
+  border-radius: 50%; }
+
+.detaiels.top {
+  visibility: hidden;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  transform: translate(20%, -40%); }
+
+.detaiels.bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%); }
+
+@media (min-width: 900px) {
+  .detaiels.top {
+    visibility: visible;
+    opacity: 1; }
+
+  .detaiels.bottom {
+    left: 0;
+    transform: translate(-40%, 40%); } }
+header {
+  padding-top: 4rem; }
+
+header::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-menu-mobile);
+  top: 10rem;
+  opacity: 0.3; }
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.logo-desktop {
+  display: none; }
+
+.button.nav {
+  display: none; }
+
+.menu,
+.close-menu,
+body.menu-active .open-menu {
+  display: none; }
+
+body.menu-active .menu,
+body.menu-active .close-menu {
+  display: initial; }
+
+body.menu-active .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--backgrond);
+  width: 100vw;
+  height: 100vh;
+  z-index: 20; }
+
+body.menu-active .logo-mobile,
+body.menu-active .close-menu {
+  position: relative;
+  z-index: 10; }
+
+.menu {
+  margin-top: 10rem; }
+
+.menu li {
+  border-block: 1px solid var(--border-menu-mobile);
+  padding: 1.6rem 2.5rem; }
+
+.menu li a {
+  color: var(--border-menu-mobile);
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.5rem; }
+
+.menu li:hover {
+  border-left: 5px solid var(--button); }
+  .menu li:hover a {
+    color: var(--text-color-menu-mobile); }
+
+@media (min-width: 900px) {
+  header {
+    padding-top: 5rem; }
+
+  header::after,
+  .logo-mobile,
+  .open-menu,
+  .close-menu {
+    display: none; }
+
+  .logo-desktop {
+    display: block; }
+
+  .button.nav {
+    display: flex;
+    margin: 0;
+    width: unset; }
+
+  .menu {
+    margin-top: initial;
+    display: flex; }
+
+  .menu li {
+    border: none; }
+
+  .menu li a {
+    font-size: 1.4rem;
+    line-height: 1.9rem; }
+
+  .menu li:hover {
+    border-left: unset;
+    border-bottom: 3px solid var(--button);
+    width: fit-content; } }
+main {
+  position: relative;
+  overflow: hidden; }
+
+.cta p {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 4.1rem;
+  text-align: center;
+  padding-block: 8.8rem;
+  max-width: 38rem;
+  margin: 0 auto;
+  width: 100%; }
+
+.button {
+  border: 1px solid var(--button);
+  padding: 1rem 3rem;
+  border-radius: 6px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18rem;
+  margin: auto; }
+  .button svg {
+    margin-left: 1rem; }
+
+.hero h1 {
+  padding-top: 9.8rem;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6.8rem;
+  text-align: center;
+  padding-bottom: 2.5rem;
+  max-width: 58rem;
+  margin: 0 auto;
+  width: 100%; }
+  .hero h1 span {
+    display: inline-block;
+    width: 100%;
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+    color: #000000; }
+
+.hero img {
+  display: inline-block;
+  width: 100%;
+  margin: auto; }
+
+@media (min-width: 900px) {
+  .cta {
+    display: none; }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+
+  .hero h1 {
+    padding-top: 4rem;
+    padding-bottom: 0;
+    font-size: 8rem;
+    line-height: 11rem; }
+
+  .hero img {
+    width: 88%; } }
+
+/*# sourceMappingURL=style.css.map */
