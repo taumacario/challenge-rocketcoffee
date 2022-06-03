@@ -13,12 +13,16 @@
   --border-menu-mobile: #A8A8B3;
   --text-color-menu-mobile: #E1E1E6; }
 
+html {
+  width: 100%; }
+
 body {
   background-color: #000;
   font-size: 1.6rem;
   font-family: 'Manrope', sans-serif;
   color: var(--text-color);
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  width: 100%; }
 
 .container {
   width: 100%;
@@ -47,8 +51,7 @@ ul {
   border-radius: 50%; }
 
 .detaiels.top {
-  visibility: hidden;
-  opacity: 0;
+  display: none;
   right: 0;
   top: 0;
   transform: translate(20%, -40%); }
@@ -60,8 +63,7 @@ ul {
 
 @media (min-width: 900px) {
   .detaiels.top {
-    visibility: visible;
-    opacity: 1; }
+    display: block; }
 
   .detaiels.bottom {
     left: 0;
@@ -215,6 +217,9 @@ main {
   width: 100%;
   margin: auto; }
 
+@media (min-width: 300px) and (max-width: 425px) {
+  .hero h1 {
+    font-size: 3.7rem; } }
 @media (min-width: 900px) {
   .cta {
     display: none; }

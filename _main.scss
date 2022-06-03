@@ -59,6 +59,12 @@ main {
   margin: auto;
 }
 
+@media (min-width:300px) and (max-width:425px) {
+  .hero h1 {
+    font-size: 3.7rem;
+  }
+}
+
 @media (min-width:900px) {
   .cta {
     display: none;
